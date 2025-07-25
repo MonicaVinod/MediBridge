@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediBridge | Search</title>
+  <link rel="stylesheet" href="css/search.css">
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #0077cc;
+    }
+
+    .search-container input,
+    .search-container select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .search-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .search-container button:hover {
+      background-color: #005fa3;
+    }
+
+    .results {
+      margin-top: 30px;
+    }
+
+    .result-card {
+      background-color: #e8f4ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .result-card h4 {
+      margin-bottom: 5px;
+      color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style> -->
+</head>
+<body>
+  <header>
+    <h1>MediBridge – Search Medicines & Blood</h1>
+  </header>
+
+  <div class="search-container">
+    <h2>Search Nearby Availability</h2>
+
+    <label for="type">Select Type:</label>
+    <select id="type">
+      <option value="medicine">Medicine</option>
+      <option value="blood">Blood</option>
+    </select>
+
+    <label for="query">Enter Medicine Name or Blood Group:</label>
+    <input type="text" id="query" placeholder="e.g., Paracetamol or B+" />
+
+    <button onclick="performSearch()">Search</button>
+
+    <div class="results" id="results"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 MediBridge. All rights reserved.
+  </footer>
+
+  <!-- <script>
+    function performSearch() {
+      const type = document.getElementById("type").value.toLowerCase();
+      const query = document.getElementById("query").value.trim().toLowerCase();
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (query === "") {
+        resultsDiv.innerHTML = "<p>Please enter a valid search term.</p>";
+        return;
+      }
+
+      // Sample static data
+      const data = {
+        medicine: [
+          { name: "Paracetamol", location: "Apollo Pharmacy, MG Road", stock: "Available" },
+          { name: "Ibuprofen", location: "MediCare, JP Nagar", stock: "Low stock" }
+        ],
+        blood: [
+          { group: "A+", location: "City Blood Bank", units: "5 units available" },
+          { group: "B+", location: "Red Cross, Indiranagar", units: "3 units available" }
+        ]
+      };
+
+      const results = data[type].filter(item => {
+        return type === "medicine"
+          ? item.name.toLowerCase().includes(query)
+          : item.group.toLowerCase() === query;
+      });
+
+      if (results.length === 0) {
+        resultsDiv.innerHTML = "<p>No results found.</p>";
+        return;
+      }
+
+      results.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "result-card";
+        if (type === "medicine") {
+          card.innerHTML = `
+            <h4>${item.name}</h4>
+            <p>Location: ${item.location}</p>
+            <p>Status: ${item.stock}</p>
+          `;
+        } else {
+          card.innerHTML = `
+            <h4>Blood Group: ${item.group}</h4>
+            <p>Location: ${item.location}</p>
+            <p>${item.units}</p>
+          `;
+        }
+        resultsDiv.appendChild(card);
+      });
+    }
+  </script> -->
+  <script href="js/search.js"></script>
+</body>
+</html>

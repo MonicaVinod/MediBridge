@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediBridge Login</title>
+  <link rel="stylesheet" href="css/login.css">
+  <!-- <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #005fa3;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style> -->
+</head>
+<body>
+  <div class="login-container">
+    <h2>MediBridge Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message"></p>
+  </div>
+
+  <!-- <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorMessage = document.getElementById("error-message");
+
+      if (username === "" || password === "") {
+        errorMessage.textContent = "Please enter both username and password.";
+        return;
+      }
+
+      // Dummy credentials for demo
+      if (username === "admin" && password === "medibridge123") {
+        alert("Login successful!");
+        window.location.href = "admin.html"; // Change to your actual admin/home page
+      } else {
+        errorMessage.textContent = "Invalid username or password.";
+      } -->
+    <!-- });
+  </script> -->
+    <script href="js/login.js"></script>
+</body>
+</html>
